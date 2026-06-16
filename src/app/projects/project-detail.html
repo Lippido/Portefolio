@@ -7,8 +7,7 @@
   <div *ngIf="!state.loading && !state.error && state.project" class="project-detail">
     <h1>{{ state.project.title }}</h1>
 
-    <img *ngIf="state.project.screenshotLink" [src]="state.project.screenshotLink" alt="{{ state.project.title }}"
-      class="project-image">
+    
 
     <div class="project-content">
       @if (state.project.technologies?.length) {

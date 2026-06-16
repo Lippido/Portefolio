@@ -44,7 +44,6 @@ function groupProjectsWithTechnologies(rows) {
         title: row.title,
         description: row.description,
         gitLink: row.gitLink,
-        screenshotLink: row.screenshotLink,
         technologies: [],
         createdAt: row.createdAt
       });
@@ -127,7 +126,6 @@ app.get('/api/projects', (req, res) => {
       p.title,
       p.description,
       p.gitLink,
-      p.screenshotLink,
       p.createdAt,
       t.id AS technologyId,
       t.name AS technologyName,
@@ -155,7 +153,6 @@ app.get('/api/projects/:id', (req, res) => {
       p.title,
       p.description,
       p.gitLink,
-      p.screenshotLink,
       p.createdAt,
       t.id AS technologyId,
       t.name AS technologyName,
@@ -203,10 +200,10 @@ app.get('/api/skills', (req, res) => {
 });
 
 app.post('/api/projects', (req, res) => {
-  const { title, description, gitLink, screenshotLink, technologies } = req.body;
+  const { title, description, gitLink, technologies } = req.body;
   db.run(
-    'INSERT INTO projects (title, description, gitLink, screenshotLink, technologies) VALUES (?, ?, ?, ?, NULL)',
-    [title, description, gitLink, screenshotLink],
+    'INSERT INTO projects (title, description, gitLink, technologies) VALUES (?, ?, ?, NULL)',
+    [title, description, gitLink],
     function (err) {
       if (err) {
         res.status(500).json({ error: err.message });
@@ -219,7 +216,7 @@ app.post('/api/projects', (req, res) => {
           return;
         }
 
-        res.json({ id: this.lastID, title, description, gitLink, screenshotLink, technologies: Array.isArray(technologies) ? technologies : [] });
+        res.json({ id: this.lastID, title, description, gitLink, technologies: Array.isArray(technologies) ? technologies : [] });
       });
     }
   );
@@ -227,10 +224,10 @@ app.post('/api/projects', (req, res) => {
 
 app.put('/api/projects/:id', (req, res) => {
   const { id } = req.params;
-  const { title, description, gitLink, screenshotLink, technologies } = req.body;
+  const { title, description, gitLink, technologies } = req.body;
   db.run(
-    'UPDATE projects SET title = ?, description = ?, gitLink = ?, screenshotLink = ? WHERE id = ?',
-    [title, description, gitLink, screenshotLink, id],
+    'UPDATE projects SET title = ?, description = ?, gitLink = ? WHERE id = ?',
+    [title, description, gitLink, id],
     function (err) {
       if (err) {
         res.status(500).json({ error: err.message });
@@ -243,7 +240,7 @@ app.put('/api/projects/:id', (req, res) => {
           return;
         }
 
-        res.json({ changes: this.changes, id, title, description, gitLink, screenshotLink, technologies: Array.isArray(technologies) ? technologies : [] });
+        res.json({ changes: this.changes, id, title, description, gitLink, technologies: Array.isArray(technologies) ? technologies : [] });
       });
     }
   );

@@ -8,7 +8,6 @@ export interface Project {
   title: string;
   description: string;
   gitLink: string;
-  screenshotLink: string;
   technologies?: string[];
   createdAt?: string;
 }

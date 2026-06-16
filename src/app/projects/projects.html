@@ -7,8 +7,6 @@
 
   <div *ngIf="!state.loading && !state.error" class="projects-grid">
     <div *ngFor="let project of state.projects" class="project-card">
-      <img *ngIf="project.screenshotLink" [src]="project.screenshotLink" alt="{{ project.title }}"
-        class="project-screenshot">
       <div class="project-header">
         <h3>{{ project.title }}</h3>
       </div>

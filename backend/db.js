@@ -17,7 +17,6 @@ function initializeDatabase() {
       title TEXT NOT NULL,
       description TEXT NOT NULL,
       gitLink TEXT,
-      screenshotLink TEXT,
       technologies TEXT,
       createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
     )
@@ -295,17 +294,36 @@ function migrateSkillsSchema(callback) {
               }
 
               const sourceSkills = legacySkills.length > 0 ? legacySkills : [
-                { category: 'Langages de Programmation', name: 'Java / C#', sortOrder: 1 },
-                { category: 'Langages de Programmation', name: 'JavaScript / TypeScript', sortOrder: 2 },
-                { category: 'Langages de Programmation', name: 'Python', sortOrder: 3 },
-                { category: 'Langages de Programmation', name: 'HTML5 / CSS3', sortOrder: 4 },
-                { category: 'Frameworks & Bibliothèques', name: 'Angular / React', sortOrder: 1 },
-                { category: 'Frameworks & Bibliothèques', name: 'Spring Boot', sortOrder: 2 },
-                { category: 'Frameworks & Bibliothèques', name: 'Node.js / Express', sortOrder: 3 },
-                { category: 'Bases de données & Outils', name: 'MySQL / PostgreSQL', sortOrder: 1 },
-                { category: 'Bases de données & Outils', name: 'MongoDB', sortOrder: 2 },
-                { category: 'Bases de données & Outils', name: 'Git / GitHub / GitLab', sortOrder: 3 },
-                { category: 'Bases de données & Outils', name: 'Docker', sortOrder: 4 }
+                { category: 'Langages de Programmation', name: 'Java', sortOrder: 1 },
+                { category: 'Langages de Programmation', name: 'C#', sortOrder: 2 },
+                { category: 'Langages de Programmation', name: 'JavaScript', sortOrder: 3 },
+                { category: 'Langages de Programmation', name: 'TypeScript', sortOrder: 4 },
+                { category: 'Langages de Programmation', name: 'Python', sortOrder: 5 },
+                { category: 'Langages de Programmation', name: 'HTML5', sortOrder: 6 },
+                { category: 'Langages de Programmation', name: 'CSS3', sortOrder: 7 },
+                { category: 'Langages de Programmation', name: 'C++', sortOrder: 8 },
+                { category: 'Langages de Programmation', name: 'Processing', sortOrder: 9 },
+
+                { category: 'Frameworks & Bibliothèques', name: 'Angular', sortOrder: 1 },
+                { category: 'Frameworks & Bibliothèques', name: 'React', sortOrder: 2 },
+                { category: 'Frameworks & Bibliothèques', name: 'Spring Boot', sortOrder: 3 },
+                { category: 'Frameworks & Bibliothèques', name: 'Node.js', sortOrder: 4 },
+                { category: 'Frameworks & Bibliothèques', name: 'Express', sortOrder: 5 },
+
+                { category: 'Bases de données & Outils', name: 'MySQL', sortOrder: 1 },
+                { category: 'Bases de données & Outils', name: 'PostgreSQL', sortOrder: 2 },
+                { category: 'Bases de données & Outils', name: 'MongoDB', sortOrder: 3 },
+                { category: 'Bases de données & Outils', name: 'SQLite', sortOrder: 4 },
+                { category: 'Bases de données & Outils', name: 'NoSQL', sortOrder: 5 },
+                { category: 'Bases de données & Outils', name: 'Git', sortOrder: 6 },
+                { category: 'Bases de données & Outils', name: 'GitHub', sortOrder: 7 },
+                { category: 'Bases de données & Outils', name: 'GitLab', sortOrder: 8 },
+                { category: 'Bases de données & Outils', name: 'Docker', sortOrder: 9 },
+
+                { category: 'Design & Multimédia', name: 'Blender', sortOrder: 1 },
+                { category: 'Design & Multimédia', name: 'DaVinci Resolve', sortOrder: 2 },
+
+                { category: 'Matériel & Microcontrôleurs', name: 'Arduino', sortOrder: 1 }
               ];
 
               const categoryOrder = [];
@@ -387,21 +405,42 @@ function seedSkills() {
     const sampleSkillCategories = [
       { name: 'Langages de Programmation', sortOrder: 1 },
       { name: 'Frameworks & Bibliothèques', sortOrder: 2 },
-      { name: 'Bases de données & Outils', sortOrder: 3 }
+      { name: 'Bases de données & Outils', sortOrder: 3 },
+      { name: 'Design & Multimédia', sortOrder: 4 },
+      { name: 'Matériel & Microcontrôleurs', sortOrder: 5 }
     ];
 
     const sampleSkills = [
-      { category: 'Langages de Programmation', name: 'Java / C#', sortOrder: 1 },
-      { category: 'Langages de Programmation', name: 'JavaScript / TypeScript', sortOrder: 2 },
-      { category: 'Langages de Programmation', name: 'Python', sortOrder: 3 },
-      { category: 'Langages de Programmation', name: 'HTML5 / CSS3', sortOrder: 4 },
-      { category: 'Frameworks & Bibliothèques', name: 'Angular / React', sortOrder: 1 },
-      { category: 'Frameworks & Bibliothèques', name: 'Spring Boot', sortOrder: 2 },
-      { category: 'Frameworks & Bibliothèques', name: 'Node.js / Express', sortOrder: 3 },
-      { category: 'Bases de données & Outils', name: 'MySQL / PostgreSQL', sortOrder: 1 },
-      { category: 'Bases de données & Outils', name: 'MongoDB', sortOrder: 2 },
-      { category: 'Bases de données & Outils', name: 'Git / GitHub / GitLab', sortOrder: 3 },
-      { category: 'Bases de données & Outils', name: 'Docker', sortOrder: 4 }
+      { category: 'Langages de Programmation', name: 'Java', sortOrder: 1 },
+      { category: 'Langages de Programmation', name: 'C#', sortOrder: 2 },
+      { category: 'Langages de Programmation', name: 'JavaScript', sortOrder: 3 },
+      { category: 'Langages de Programmation', name: 'TypeScript', sortOrder: 4 },
+      { category: 'Langages de Programmation', name: 'Python', sortOrder: 5 },
+      { category: 'Langages de Programmation', name: 'HTML5', sortOrder: 6 },
+      { category: 'Langages de Programmation', name: 'CSS3', sortOrder: 7 },
+      { category: 'Langages de Programmation', name: 'C++', sortOrder: 8 },
+      { category: 'Langages de Programmation', name: 'Processing', sortOrder: 9 },
+
+      { category: 'Frameworks & Bibliothèques', name: 'Angular', sortOrder: 1 },
+      { category: 'Frameworks & Bibliothèques', name: 'React', sortOrder: 2 },
+      { category: 'Frameworks & Bibliothèques', name: 'Spring Boot', sortOrder: 3 },
+      { category: 'Frameworks & Bibliothèques', name: 'Node.js', sortOrder: 4 },
+      { category: 'Frameworks & Bibliothèques', name: 'Express', sortOrder: 5 },
+
+      { category: 'Bases de données & Outils', name: 'MySQL', sortOrder: 1 },
+      { category: 'Bases de données & Outils', name: 'PostgreSQL', sortOrder: 2 },
+      { category: 'Bases de données & Outils', name: 'MongoDB', sortOrder: 3 },
+      { category: 'Bases de données & Outils', name: 'SQLite', sortOrder: 4 },
+      { category: 'Bases de données & Outils', name: 'NoSQL', sortOrder: 5 },
+      { category: 'Bases de données & Outils', name: 'Git', sortOrder: 6 },
+      { category: 'Bases de données & Outils', name: 'GitHub', sortOrder: 7 },
+      { category: 'Bases de données & Outils', name: 'GitLab', sortOrder: 8 },
+      { category: 'Bases de données & Outils', name: 'Docker', sortOrder: 9 },
+
+      { category: 'Design & Multimédia', name: 'Blender', sortOrder: 1 },
+      { category: 'Design & Multimédia', name: 'DaVinci Resolve', sortOrder: 2 },
+
+      { category: 'Matériel & Microcontrôleurs', name: 'Arduino', sortOrder: 1 }
     ];
 
     const insertCategory = db.prepare(`
@@ -457,34 +496,30 @@ function seedDatabase() {
         {
           title: 'Jeu Sérieux de Serre Connectée',
           description: 'Développement d\'un jeu sérieux en Godot utilisant C#. Création et modélisation des environnements 3D avec Blender en utilisant les Geometry Nodes pour optimiser les assets.',
-          gitLink: null,
-          screenshotLink: 'https://via.placeholder.com/400x300?text=Jeu+Serre'
+          gitLink: null
         },
         {
           title: 'Refonte du Site BUT Project',
           description: 'Refonte d\'une plateforme de gestion de projets étudiants. Migration d\'une application Django vers une architecture Django REST API pour améliorer la scalabilité et la maintenabilité.',
-          gitLink: 'https://github.com/lippido/but-project',
-          screenshotLink: 'https://via.placeholder.com/400x300?text=BUT+Project'
+          gitLink: 'https://github.com/lippido/but-project'
         },
         {
           title: 'Site de Paris Sportif et Jeux en Ligne',
           description: 'Développement d\'une plateforme de paris sportif et jeux en ligne utilisant le framework Symfony. Gestion des utilisateurs, des paris et intégration avec des APIs de sports.',
-          gitLink: 'https://github.com/lippido/sports-betting',
-          screenshotLink: 'https://via.placeholder.com/400x300?text=Paris+Sportif'
+          gitLink: 'https://github.com/lippido/sports-betting'
         }
       ];
 
       const stmt = db.prepare(`
-        INSERT INTO projects (title, description, gitLink, screenshotLink, technologies)
-        VALUES (?, ?, ?, ?, NULL)
+        INSERT INTO projects (title, description, gitLink, technologies)
+        VALUES (?, ?, ?, NULL)
       `);
 
       sampleProjects.forEach(project => {
         stmt.run([
           project.title,
           project.description,
-          project.gitLink,
-          project.screenshotLink
+          project.gitLink
         ]);
       });
 
