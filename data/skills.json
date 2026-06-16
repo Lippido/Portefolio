@@ -1,68 +1,32 @@
 [
-    {
-        "id": 1,
-        "category": "Langages de Programmation",
-        "name": "Java / C#",
-        "sortOrder": 1
-    },
-    {
-        "id": 2,
-        "category": "Langages de Programmation",
-        "name": "JavaScript / TypeScript",
-        "sortOrder": 2
-    },
-    {
-        "id": 3,
-        "category": "Langages de Programmation",
-        "name": "Python",
-        "sortOrder": 3
-    },
-    {
-        "id": 4,
-        "category": "Langages de Programmation",
-        "name": "HTML5 / CSS3",
-        "sortOrder": 4
-    },
-    {
-        "id": 5,
-        "category": "Frameworks & Bibliothèques",
-        "name": "Angular / React",
-        "sortOrder": 1
-    },
-    {
-        "id": 6,
-        "category": "Frameworks & Bibliothèques",
-        "name": "Spring Boot",
-        "sortOrder": 2
-    },
-    {
-        "id": 7,
-        "category": "Frameworks & Bibliothèques",
-        "name": "Node.js / Express",
-        "sortOrder": 3
-    },
-    {
-        "id": 8,
-        "category": "Bases de données & Outils",
-        "name": "MySQL / PostgreSQL",
-        "sortOrder": 1
-    },
-    {
-        "id": 9,
-        "category": "Bases de données & Outils",
-        "name": "MongoDB",
-        "sortOrder": 2
-    },
-    {
-        "id": 10,
-        "category": "Bases de données & Outils",
-        "name": "Git / GitHub / GitLab",
-        "sortOrder": 3
-    },
-    {
-        "id": 11,
-        "category": "Bases de données & Outils",
-        "name": "Docker",
-        "sortOrder": 4
-    }
+  { "id": 1, "category": "Langages de Programmation", "name": "Java", "sortOrder": 1 },
+  { "id": 2, "category": "Langages de Programmation", "name": "C#", "sortOrder": 2 },
+  { "id": 3, "category": "Langages de Programmation", "name": "JavaScript", "sortOrder": 3 },
+  { "id": 4, "category": "Langages de Programmation", "name": "TypeScript", "sortOrder": 4 },
+  { "id": 5, "category": "Langages de Programmation", "name": "Python", "sortOrder": 5 },
+  { "id": 6, "category": "Langages de Programmation", "name": "HTML5", "sortOrder": 6 },
+  { "id": 7, "category": "Langages de Programmation", "name": "CSS3", "sortOrder": 7 },
+  { "id": 8, "category": "Langages de Programmation", "name": "C++", "sortOrder": 8 },
+  { "id": 9, "category": "Langages de Programmation", "name": "Processing", "sortOrder": 9 },
+
+  { "id": 10, "category": "Frameworks & Bibliothèques", "name": "Angular", "sortOrder": 1 },
+  { "id": 11, "category": "Frameworks & Bibliothèques", "name": "React", "sortOrder": 2 },
+  { "id": 12, "category": "Frameworks & Bibliothèques", "name": "Spring Boot", "sortOrder": 3 },
+  { "id": 13, "category": "Frameworks & Bibliothèques", "name": "Node.js", "sortOrder": 4 },
+  { "id": 14, "category": "Frameworks & Bibliothèques", "name": "Express", "sortOrder": 5 },
+
+  { "id": 15, "category": "Bases de données & Outils", "name": "MySQL", "sortOrder": 1 },
+  { "id": 16, "category": "Bases de données & Outils", "name": "PostgreSQL", "sortOrder": 2 },
+  { "id": 17, "category": "Bases de données & Outils", "name": "MongoDB", "sortOrder": 3 },
+  { "id": 18, "category": "Bases de données & Outils", "name": "SQLite", "sortOrder": 4 },
+  { "id": 19, "category": "Bases de données & Outils", "name": "NoSQL", "sortOrder": 5 },
+  { "id": 20, "category": "Bases de données & Outils", "name": "Git", "sortOrder": 6 },
+  { "id": 21, "category": "Bases de données & Outils", "name": "GitHub", "sortOrder": 7 },
+  { "id": 22, "category": "Bases de données & Outils", "name": "GitLab", "sortOrder": 8 },
+  { "id": 23, "category": "Bases de données & Outils", "name": "Docker", "sortOrder": 9 },
+
+  { "id": 24, "category": "Design & Multimédia", "name": "Blender", "sortOrder": 1 },
+  { "id": 25, "category": "Design & Multimédia", "name": "DaVinci Resolve", "sortOrder": 2 },
+
+  { "id": 26, "category": "Matériel & Microcontrôleurs", "name": "Arduino", "sortOrder": 1 }
 ]
